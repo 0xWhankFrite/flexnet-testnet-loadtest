@@ -7,7 +7,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const args = process.argv.slice(2);
 const ID = args[0];
 
-const rpcNodeURL = 'ws://0.0.0.0:8576';
+const rpcNodeURL = 'https://rpc-testnet.flexnet.tech';
 const walletDirPath = "wallets/";
 const walletFilePath = `wallets/${args[0]}.json`;
 const walletPassword = 'WouldNotGuess';
@@ -62,7 +62,7 @@ async function main() {
 	}
 
 	async function transfer(credit, addressTo, gasPrice, gasLimit) {
-		log(`Sending ${credit} tPLS to ${addressTo} gas price ${web3.utils.fromWei(gasPrice, "gwei")} Beat, gas limit ${web3.utils.fromWei(gasLimit, "gwei")} Beat`);
+		log(`Sending ${credit} FLEX to ${addressTo} gas price ${web3.utils.fromWei(gasPrice, "gwei")} Beat, gas limit ${web3.utils.fromWei(gasLimit, "gwei")} Beat`);
 
 		const transaction = await web3.eth.sendTransaction({
 			from: address,
@@ -137,7 +137,7 @@ async function main() {
 	async function doRandomTransaction() {
 		try {
 			const balanceWei = await web3.eth.getBalance(address, 'latest');
-			log("Current balance", web3.utils.fromWei(balanceWei, 'ether'), "tPLS");
+			log("Current balance", web3.utils.fromWei(balanceWei, 'ether'), "FLEX");
 			if(Math.random() < 0.5)
 				await testTransfer(balanceWei);
 			else
@@ -145,7 +145,7 @@ async function main() {
 		}
 		catch(err) {
 			const newBalanceWei = await web3.eth.getBalance(address, 'latest');
-			log(`Transaction FAILED (balance: ${web3.utils.fromWei(newBalanceWei, 'ether')} tPLS) ${err}`);
+			log(`Transaction FAILED (balance: ${web3.utils.fromWei(newBalanceWei, 'ether')} FLEX) ${err}`);
 		}
 
 		const now = new Date();
