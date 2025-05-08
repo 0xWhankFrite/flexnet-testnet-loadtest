@@ -1,10 +1,10 @@
 # Simple FlexNet (testnet) load testing tool
 
-This set of scripts emulates concurrent  send transactions between selected number of FlexNet accounts. Basic idea is to spin up numerous processes which perform send transactions in a loop, but only if the account ballance is sufficient.
+This set of scripts emulates concurrent  send transactions between selected number of FlexNet accounts. Basic idea is to spin up numerous processes which perform send transactions in a loop, but only if the account balance is sufficient.
 
-You need Linux and NodeJS to run this tool. Then install the needed NPM modules withing the working directory:
+You need Linux and NodeJS to run this tool. Then install the needed NPM modules within the working directory:
 ```
-npm --install web3
+npm install web3
 ```
 
 ## Configuration
