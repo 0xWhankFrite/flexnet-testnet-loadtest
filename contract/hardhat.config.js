@@ -21,11 +21,11 @@ require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config()
 module.exports = {
   solidity: "0.8.13",
-  defaultNetwork: "testnet",
+  defaultNetwork: "FlexNet Testnet",
   networks: {
     testnet: {
-      chainId: 941,
-      url: "https://rpc.v2b.testnet.pulsechain.com",
+      chainId: 281329,
+      url: "https://rpc-testnet.flexnet.tech",
       accounts: (process.env.PKEYS || '').split(','),
       gasPrice: 8000000000,
     }
@@ -39,9 +39,9 @@ module.exports = {
 
 const { chainConfig } = require("@nomiclabs/hardhat-etherscan/dist/src/ChainConfig");
 chainConfig['testnet'] = {
-  chainId: 941,
+  chainId: 281329,
   urls: {
-    apiURL: "https://scan.v2b.testnet.pulsechain.com/api",
-    browserURL: "https://scan.v2b.testnet.pulsechain.com",
+    apiURL: "https://scan-testnet.flexnet.tech/api",
+    browserURL: "https://scan-testnet.flexnet.tech",
   },
 }
