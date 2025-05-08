@@ -30,4 +30,5 @@ Now you can run the agents:
 At the beginning of execution some of the agents may report starving becuase they will have no FLEX. But after some time the FLEX will be spread bettwen wallets.
 
 https://flexnet.tech/
+
 https://scan-testnet.flexnet.tech/
