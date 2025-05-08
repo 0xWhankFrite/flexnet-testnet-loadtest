@@ -39,7 +39,7 @@ contract BurnContract {
     function search(uint256 key, uint256 count, uint256 needle) public returns(bool) {
         for (uint256 i = 0; i < count; i++) {
             if(get(key+i) == needle) {
-                emit FoundEvent(key + 1);
+                emit FoundEvent(key + i);
                 return true;
             }
         }
