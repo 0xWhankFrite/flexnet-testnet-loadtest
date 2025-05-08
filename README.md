@@ -17,7 +17,7 @@ To create wallets simply run:
 ```
 ./create-wallets.sh
 ```
-this creates lots of wallets and stores them in `./wallets/` directory.
+this creates a number of wallets and stores them in `./wallets/` directory. (need to manually make new directory "wallets" inside main directory for now)
 
 ## Running the load test
 
