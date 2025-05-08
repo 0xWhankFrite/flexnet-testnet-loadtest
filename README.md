@@ -1,6 +1,6 @@
 # Simple FlexNet (testnet) load testing tool
 
-This set of scripts emulates concurrent  send transactions between selected number of FlexNet accounts. Basic idea is to spin up numerous processes which perform send transactions in a loop, but only if the account balance is sufficient.
+This set of scripts emulates concurrent send transactions between selected number of FlexNet accounts. Basic idea is to spin up numerous processes which perform send transactions in a loop, but only if the account balance is sufficient.
 
 You need Linux and NodeJS to run this tool. Then install the needed NPM modules within the working directory:
 ```
@@ -28,3 +28,6 @@ Now you can run the agents:
 ./run-agents.sh
 ```
 At the beginning of execution some of the agents may report starving becuase they will have no FLEX. But after some time the FLEX will be spread bettwen wallets.
+
+https://flexnet.tech/
+https://scan-testnet.flexnet.tech/
